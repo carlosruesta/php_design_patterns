@@ -12,4 +12,11 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
 + Isso simula uma linha de producao onde cada fase trata da propria fase e depois de finalizado encaminha o item para a próxima fase;
 + Para saber mais sobre a parte teórica deste padrão, e analisar diferentes implementações, você pode conferir este link: https://refactoring.guru/design-patterns/chain-of-responsibility.
 
+#### Template Method(TM)
++ Comezamos a adicionar mais impostos e eles de certa forma são muito parecidos:
+    + 2 aliquotas, regras muito parecidas 
++ A verificação por uma alíquota máxima e o retorno condicional da alíquota está duplicada em duas classes. Mesmo em um exemplo pequeno, como este, duplicação nunca é legal. Mas imagine um algoritmo grande. O ideal é sempre extrair códigos duplicados.
++ Template Method visa evitar codigo duplicado entre classes, usando classes e métodos abstractos que centralizam o codigo "comum" e expoem "metodos abstratos e protected" que serão reimplementados pelas proprias regras de cada classe filha;
++ As aplicações do padrão Template Method no mundo PHP são muitas, mas além de entender a parte prática, é muito importante ler sobre a teoria por trás do padrão:  https://refactoring.guru/design-patterns/template-method.
+
  

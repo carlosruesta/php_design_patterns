@@ -2,8 +2,8 @@
 
 use Alura\DesignPattern\CalculadoraDeImpostos;
 use Alura\DesignPattern\CalculadoraDeImpostosSemPadrao;
-use Alura\DesignPattern\Impostos\ICMS;
-use Alura\DesignPattern\Impostos\ISS;
+use Alura\DesignPattern\Impostos\Icms;
+use Alura\DesignPattern\Impostos\Iss;
 use Alura\DesignPattern\Orcamento;
 
 require 'vendor\autoload.php';
@@ -24,7 +24,7 @@ echo 'Testes com padrao strategy';
 
 $calculadora = new CalculadoraDeImpostos();
 echo PHP_EOL;
-echo $calculadora->calcula($orcamento, new ICMS());
+echo $calculadora->calcula($orcamento, new Icms());
 echo PHP_EOL;
-echo $calculadora->calcula($orcamento, new ISS());
+echo $calculadora->calcula($orcamento, new Iss());
 echo PHP_EOL;
