@@ -19,4 +19,10 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
 + Template Method visa evitar codigo duplicado entre classes, usando classes e métodos abstractos que centralizam o codigo "comum" e expoem "metodos abstratos e protected" que serão reimplementados pelas proprias regras de cada classe filha;
 + As aplicações do padrão Template Method no mundo PHP são muitas, mas além de entender a parte prática, é muito importante ler sobre a teoria por trás do padrão:  https://refactoring.guru/design-patterns/template-method.
 
+#### State
++ Implementado quando os comportamentos de um objeto dependem do estado do objeto;
++ Cada estado sabe como executar o comportamento. Por isso o comportamento deve ser implementado no estado.
++ Tomar cuidado quando isso gera mais complexidade que solução;
++ Tomar cuidado com a questão das exceptions, de certa forma tem que respeitar os contratos. Então deve se colocar na classe pai para que os filhos respeitem isso;
++ Conferir este link: https://refactoring.guru/design-patterns/state.
  
