@@ -16,7 +16,7 @@ namespace Alura\DesignPattern;
  * Por isso o ideal é criar um forma que sejam criaddos arquivos novos para as novas
  * regras que isolem os bugs
  */
-class CalculadoraDeImpostosComProblema
+class CalculadoraDeImpostosSemPadrao
 {
     public function calcula(Orcamento $orcamento, string $nomeImposto): float
     {

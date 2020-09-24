@@ -1,14 +1,14 @@
 <?php
 
 use Alura\DesignPattern\CalculadoraDeImpostos;
-use Alura\DesignPattern\CalculadoraDeImpostosComProblema;
+use Alura\DesignPattern\CalculadoraDeImpostosSemPadrao;
 use Alura\DesignPattern\Impostos\ICMS;
 use Alura\DesignPattern\Impostos\ISS;
 use Alura\DesignPattern\Orcamento;
 
 require 'vendor\autoload.php';
 
-$calculadora = new CalculadoraDeImpostosComProblema();
+$calculadora = new CalculadoraDeImpostosSemPadrao();
 
 $orcamento = new Orcamento();
 $orcamento->valor = 100;
