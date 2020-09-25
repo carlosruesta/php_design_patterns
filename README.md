@@ -35,4 +35,27 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
 + Mesmo assim dá para isolar ainda mais o código em:
     + codigo para a criacao da estrutura ou ambiente para execucao.... porque? porque aqui trazemos todas as dependencias necessarias. Isso permitirá futuramente mockar as coisas
     + codigo para execucao propriamente dita do servico ou caso de uso a ser executado;
-+ Para isolar em 2 fases vamos implementar o padrão CommandHandler que vai um nivel acima de abstracao 
++ Para isolar em 2 fases vamos implementar o padrão CommandHandler que vai um nivel acima de abstracao
+
+#### Observers
++ Aqui o problema formulado está em funcao das acoes necessarias na geracao de pedido (registro no banco, envio de email, registro no log etc);
++ Um primeiro ponto seria isolar esses caras em classes proprias que executem essas ações;
++ Mas como estão todas dentro do mesmo código, vamos isolar para facilitar implementacoes futuras para adicionar novas ações;
++ EXPLICACAO: Um Command Handler tem como responsabilidade, normalmente, apenas orquestrar as tarefas a serem executadas, ou seja, chamar as classes necessárias que realizam as tarefas desejadas. 
+    + No nosso caso, o Command Handler tinha todo o código do fluxo em seu corpo.
+    + Separamos em classes para:
+        + Porque, com classes menores e mais concisas, é mais fácil encontrar possíveis problemas
+        + Porque a implementação de cada tarefa pode mudar com o tempo e o Command Handler não deve precisar saber disso
++ O padrão Observer é comumente utilizado por diversas bibliotecas que trabalham com eventos. 
+    + Muito provavelmente, seu framework preferido (Symfony, Laravel, Phalcon, etc) possui algum componente que lida com eventos.
+    + A forma como o padrão foi implementado aqui na aula é a mais simples e pura, mas existem diversas modificações que podem ser feitas. 
+    + Dar nomes a eventos para filtrar quais ações serão executadas, etc. 
+
++ Resumindo:
+    + Deixar a implementação de todas as tarefas de um caso de uso da aplicação na mesma classe pode trazer problemas
+        + Dificuldade de manutenção
+        + Classes muito grandes e difíceis de ler
+        + Problemas quando precisar alterar a implementação de uma das tarefas
+        + Que é mais interessante separar cada ação em uma classe separada
+        + Como ligar um evento ocorrido com suas ações, através do padrão Observer
+        
