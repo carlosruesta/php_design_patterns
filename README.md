@@ -26,3 +26,13 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
 + Tomar cuidado com a questão das exceptions, de certa forma tem que respeitar os contratos. Então deve se colocar na classe pai para que os filhos respeitem isso;
 + Conferir este link: https://refactoring.guru/design-patterns/state.
  
+#### Command
++ Isolar código que atende alguma funcionalidade. Assim essa funcionalidade será chamada como um comando toda vez que precisar dela.
++ Geralmente esse tipo de códigos se encontram em controllers ou até reposítories que compilam códigos com muita lógica e depois é dificil reaproveitar;
++ Isolar o código num comando é ideal para executar esse comando desde qualquer lugar.
+    MAS será que dá para ir um nivel de abstracao acima dele... e facilitar que ele se execute em qualquer ordem
+    Para isso podemos implementar uma interface. Ao implementar uma interface que defina o contrato de qualquer command facilitamos seu uso.
++ Mesmo assim dá para isolar ainda mais o código em:
+    + codigo para a criacao da estrutura ou ambiente para execucao.... porque? porque aqui trazemos todas as dependencias necessarias. Isso permitirá futuramente mockar as coisas
+    + codigo para execucao propriamente dita do servico ou caso de uso a ser executado;
++ Para isolar em 2 fases vamos implementar o padrão CommandHandler que vai um nivel acima de abstracao 
