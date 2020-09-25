@@ -21,4 +21,9 @@ class Aprovado extends EstadoOrcamento
         $orcamento->estadoAtual = new Reprovado();
     }
 
+    public function finaliza(Orcamento $orcamento)
+    {
+        $orcamento->estadoAtual = new Finalizado();
+    }
+
 }

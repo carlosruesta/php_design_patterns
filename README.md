@@ -59,3 +59,35 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
         + Que é mais interessante separar cada ação em uma classe separada
         + Como ligar um evento ocorrido com suas ações, através do padrão Observer
         
+#### Iterator
+
++ PROBLEMA DO ARRAY
+    + Os arrays em PHP, embora sejam muito versáteis, têm diversos problemas.
+    + Primeiramente, eles são otimizados para tudo e para nada ao mesmo tempo, ou seja,
+    + se é performance que você quer, não são os arrays que você vai usar.
+    + Além disso, não é possível informar o tipo dos elementos de um array do PHP.
+    +
+    + Como é possível colocar qualquer tipo de dado em um array, não podemos ter a certeza
+    + de que todos os elementos dele possuem aquele tipo.
+    +
+    + Inclusive, uma das regras de Object Calisthenics (vale a pena a leitura)
+    + diz que devemos sempre encapsular as nossas coleções em classes específicas.
+
++ PRIMEIRA ABSTRACAO - LEVAR O ARRAY PARA UMA CLASSE
+
+    + listaOrcamentos->addOrcamento('Aqui pode ir qualquer coisa'); // PERFEITO... já não vai funcionar
+
++ A linha abaixo não funcionou por ListaOrcamentos é um objeto e não é um array
+    + foreach ($listaOrcamentos as $orcamento) {
+
++ Para resolver preciso chamar o método que devolve o array dos orcamentos. Conforme abaixo
+
++ SEGUNDA ABSTRACAO ==> Transformar a classe ListaOrcamentos iterable.
+
++ Para isso poderia implementar uma interface Iterable, mas precisaria implementar muitos métodos que não preciso: rewind, valid, next,
+
+    + Dado que somente preciso iterar os itens de um array, posso fazer que essa classe implemente a interface IteratorAggregate
+    + Neste caso precisarei implementar um método getIterator
+    + Um array não é um iterator
+    + Neste caso transformo o Array num Iterator, pela função do PHP puro para cast \ArrayIterator()
+ 
