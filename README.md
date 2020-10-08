@@ -1,4 +1,4 @@
-## php_poo_padroes_comportamentais
+## Padroes Comportamentais
 
 #### Muitos IFs
 Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possamos criar código novo e editar o mínimo possível de código já existente. Este é um dos principais pontos do princípio Aberto-Fechado (Open-Closed Principle) do SOLID. Ao editar código existente, podemos acabar quebrando funcionalidades já implementadas e funcionais.
@@ -91,3 +91,15 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
     + Um array não é um iterator
     + Neste caso transformo o Array num Iterator, pela função do PHP puro para cast \ArrayIterator()
  
+ 
+ ## Padrões Estruturais
+ 
+ Padrões estruturais nos ajudam a relacionar diversas classes de forma organizada.
+ 
+ #### Adapters
+ 
+ + Recomendação para trabalhar com dependencias: **Depender sempre de abstrações (interfaces ou classes abstratas), e não de implementações específicas**
+    + Este é um dos princípio de SOLID (Dependency Inversion Principle, a letra D). 
+    + Devemos sempre preferir depender de abstrações, ou seja, interfaces ou classes abstratas, sempre que possível, ao invés de implementações específicas. 
+    + Mesmo que dependamos de uma classe concreta, o ideal é depender de sua interface, ou seja, uma chamada de método público, e não uma série de chamadas.
+ + Detalhes de infraestrutura devem ser abstraídos através de interfaces
