@@ -103,3 +103,12 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
     + Devemos sempre preferir depender de abstrações, ou seja, interfaces ou classes abstratas, sempre que possível, ao invés de implementações específicas. 
     + Mesmo que dependamos de uma classe concreta, o ideal é depender de sua interface, ou seja, uma chamada de método público, e não uma série de chamadas.
  + Detalhes de infraestrutura devem ser abstraídos através de interfaces
+ 
+ #### Bridge
+ 
++ O padrão de ponte visa representar o fluxo de transformação ou execução que acontece em 2 universos diferentes.
++ Exemplos:
+    + dados a serem exportaddos e os mecanismos de exportação
+    + formas a serem pintadas e as cores
++ O padrão bridge visa a escalabilidade da modelagem ao elaborar uma ponte emtre a abstração e todas as implementacoes
+ 
