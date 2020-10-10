@@ -112,3 +112,13 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
     + formas a serem pintadas e as cores
 + O padrão bridge visa a escalabilidade da modelagem ao elaborar uma ponte emtre a abstração e todas as implementacoes
  
+#### Decorator
+
++ É usado para evitar o crescimento desorganizado e exponencial de classes do sistema. Para isso o decorator permitirá a expansão de classes de forma dinámica e recursiva.
++ Permite expandir o comportamento ou funcionalidade de uma classe. Por exemplo a combinação de impostos. Um exemplo no FMB seria a aplicação de uma regra de validaçã combinada.
++ Um exemplo bacana seria quando vai implementar a concatenação dos dados de um contato: nome + sobrenome + data_nascimento + CPF + endereco + perfil.
+    + A apresentação do resultado vai depender dos dados preenchidos para cada contato e também da ordem de aplicação da concatenação;
++ Esse tipo de padrão tem um jeito recursivo para evitar recriar o mesmo comportamento inúmeras vezes para cada combinação;
++ Ao contrario disso posso ir adicionando comportamentos nas classes dinamicamente em tempo de execução;
++ O padrão Decorator é muito poderoso e bastante comum de ser implementado, mas possui alguns detalhes importantes a serem observados, como o fato do Decorator precisar possuir a mesma interface do objeto que ele está decorando.
+  
