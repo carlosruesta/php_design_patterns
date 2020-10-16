@@ -122,3 +122,15 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
 + Ao contrario disso posso ir adicionando comportamentos nas classes dinamicamente em tempo de execução;
 + O padrão Decorator é muito poderoso e bastante comum de ser implementado, mas possui alguns detalhes importantes a serem observados, como o fato do Decorator precisar possuir a mesma interface do objeto que ele está decorando.
   
+#### Composite
+
++ Ao implementar uma interface que me permita representar ItemOrcamentos e Orcamentos de forma semelhante.
+    + Dessa forma posso tratar o orcamento e os items (pai e filhos) da mesma forma;
+    + Posso percorrer essa lista de Orcavels facilmente, para calcular o valor do orçamento, que é a raiz da árvore.
++ Permite a implementação de uma árvore de objetos de forma simples;
++ Composite tmabém chamado de Object - Tree ou arvore de objetos;
++ No padrão Composite: serve para implementar uma estrutura de arvore onde uma arvore e uma folha podem ser representados da mesma forma (interface) permitiendo acumular tudo na arvore principal ou elagumas folhas chave;
+
+#### Facade
+
+
