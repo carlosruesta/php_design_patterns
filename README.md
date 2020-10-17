@@ -133,4 +133,21 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
 
 #### Facade
 
++ Em determinados casos, nós podemos precisar de um acesso simplificado a uma parte complexa ou grande do nosso sistema:
+    + como autenticação, acesso a sistema de arquivos, cache, etc. 
++ Uma classe de fachada (facade) ajuda nisso, contendo apenas a funcionalidade desejada, pode ser bastante útil.
++ Padrão de projeto muito questionado, utilizado no Laravel;
++ Com esse padrão, podemos pegar um sub-sistema e expor parte de suas funcionalidades através de uma classe.
++ A classe responsável por ser essa fachada implementa o padrão Facade
++ O Laravel trabalha com uma espécie de Facade em sua arquitetura
+
++ Minha opinião: O que posso dizer do Facade, é que tudo que é feito parece ser uma fachada que esconde um monte de código para dentro.
+    + O fato de instanciar outras classes dentro pode ser um erro, mas é uma decisão do desenvolvedor;
+    + Poderia ser uma dependencia injetada e não seria mais um Facade? Não sei... acho que dizer que isso é um padrão, resulta meio redundante.
+    + Eu vi como o Laravel implementa e permite extender esse comportamento de Facade. 
+    + Acredito que se bem implementado, tudo bem? A questão sempre vai ser o tamanho do sistema que está por trás do Facade.
+    
+     
+
+
 
