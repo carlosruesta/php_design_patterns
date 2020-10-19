@@ -43,6 +43,7 @@ class Orcamento implements Orcavel
 
     public function valor(): float
     {
+        sleep(5);
         return array_reduce(
             $this->itens,
             fn($valorAcumulado, Orcavel $itemOrcamento) => $itemOrcamento->valor() + $valorAcumulado,

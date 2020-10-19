@@ -147,6 +147,14 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
     + Eu vi como o Laravel implementa e permite extender esse comportamento de Facade. 
     + Acredito que se bem implementado, tudo bem? A questão sempre vai ser o tamanho do sistema que está por trás do Facade.
     
+#### Proxy
+
++ Serve para interceptar um comportamento e realizar alguma coisa previa
++ Controla o accesso a um objeto original
++ Ao interceptar o metodo do original é possivel executar alguma coisa antes ou depois do metodo;
++ A diferença com o Decorator está na intenção:
+    + A intenção do decorator é adicionar uma funcionalidade;
+    + A intenção do proxy é interceptar o método para adicionar a funcionalidade sem alterar o metodo original 
      
 
 
