@@ -158,6 +158,19 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
     + A intenção do proxy é interceptar o método para adicionar a funcionalidade sem alterar o metodo original 
 + No nosso caso, foi implementada uma forma de fazer cache e evitar chamar um método custoso toda hora;
      
+#### Flyweight
+
++ Util para otimização de algoritmos
++ Serve para otimizar o consumo de memória, ao reaproveitar objetos que possuem propriedades iguais
+    + Podemos extrair parte de uma classe, para que os seus dados possam ser compartilhados
++ Para uso deste padrão é necessário adaptar códigos e estruturas de classes de forma a deixar mais leve a classe que passará por uma iteração de grande volume;
++ O fato de precisar reformular as classes faz com que muitas vezes perca-se o sentido semantico e lógico da classe. 
+    + Por isso é preciso tomar bastante cuidado com o uso deste padrão e usar quando realmente é necessário;
++ No nosso caso a economia foi minima, mas a classe pedido ficou com uma referencia a dados Extrinsecos... para entender isso é complicado.
+    + Para manutenção do código fica complicado pois ao longo do tempo essa clareza se perde e novos desenvolvedores podem ficar perdidos;
++ Se em algum momento você se deparar com milhões de objetos sendo armazenados em memória e um consumo muito alto desse recurso
+    + Talvez esse padrão possa te salvar, mas lembre-se: essa situação não acontece rotineiramente.
++ Vale ressaltar também que a parte da criação desses objetos compartilhados, utilizando um cache, vai ser mostrada no próximo curso, que é o de Padrões de Projeto Criacionais.
 
 
 
