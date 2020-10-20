@@ -150,11 +150,13 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
 #### Proxy
 
 + Serve para interceptar um comportamento e realizar alguma coisa previa
-+ Controla o accesso a um objeto original
++ Controla o accesso a um objeto original. Para isso é implementada uma nova classe derivada (filha da original) que reescreverá o método a ser controlado;
++ A classe derivada receberá posteriormente o objeto original e o executará, mas poderá antes e depois executar códigos adicionais;
 + Ao interceptar o metodo do original é possivel executar alguma coisa antes ou depois do metodo;
 + A diferença com o Decorator está na intenção:
-    + A intenção do decorator é adicionar uma funcionalidade;
+    + A intenção do decorator é alterar o comportamento normal de uma funcionalidade. A alteracao é dinamica em tempo de execução;
     + A intenção do proxy é interceptar o método para adicionar a funcionalidade sem alterar o metodo original 
++ No nosso caso, foi implementada uma forma de fazer cache e evitar chamar um método custoso toda hora;
      
 
 
