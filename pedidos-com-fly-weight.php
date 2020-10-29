@@ -1,14 +1,14 @@
 <?php
 
-use Alura\DesignPattern\DadosExtrinsecosPeddo;
 use Alura\DesignPattern\Orcamento;
-use Alura\DesignPattern\Pedido;
+use Alura\DesignPattern\Pedido\DadosExtrinsecosPedido;
+use Alura\DesignPattern\Pedido\Pedido;
 
 require_once 'vendor/autoload.php';
 
 $pedidos = [];
 
-$dadosPedido = new DadosExtrinsecosPeddo(md5((string) rand(1, 100000)), new \DateTimeImmutable());
+$dadosPedido = new DadosExtrinsecosPedido(md5((string) rand(1, 100000)), new \DateTimeImmutable());
 
 for ($i = 0; $i < 10000; $i++) {
     $pedido = new Pedido();

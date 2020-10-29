@@ -2,6 +2,8 @@
 
 namespace Alura\DesignPattern;
 
+use Alura\DesignPattern\Pedido\PedidoComSplSubject;
+
 class GeraPedidoHandlerComSplObserver implements \SplSubject
 {
     /** @var \SplObserver[] */

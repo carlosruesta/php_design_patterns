@@ -1,13 +1,12 @@
 <?php
 
-
 namespace Alura\DesignPattern;
-
 
 use Alura\DesignPattern\AcoesNoGeraPedido\AcaoAposGerarPedido;
 use Alura\DesignPattern\AcoesNoGeraPedido\EnviaEmail;
 use Alura\DesignPattern\AcoesNoGeraPedido\RegistraEmBanco;
 use Alura\DesignPattern\AcoesNoGeraPedido\RegistraEmLog;
+use Alura\DesignPattern\Pedido\Pedido;
 
 class GeraPedidoHandler
 {

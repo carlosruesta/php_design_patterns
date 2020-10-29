@@ -171,6 +171,6 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
 + Se em algum momento você se deparar com milhões de objetos sendo armazenados em memória e um consumo muito alto desse recurso
     + Talvez esse padrão possa te salvar, mas lembre-se: essa situação não acontece rotineiramente.
 + Vale ressaltar também que a parte da criação desses objetos compartilhados, utilizando um cache, vai ser mostrada no próximo curso, que é o de Padrões de Projeto Criacionais.
-
++ **Esse padrão só deve ser utilizado caso hajam milhões de objetos em memória ao mesmo tempo, fazendo com que muita memória RAM seja utilizada.**
 
 

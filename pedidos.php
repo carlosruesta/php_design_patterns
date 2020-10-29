@@ -1,7 +1,7 @@
 <?php
 
 use Alura\DesignPattern\Orcamento;
-use Alura\DesignPattern\Pedido;
+use Alura\DesignPattern\Pedido\Pedido;
 
 require_once 'vendor/autoload.php';
 

@@ -1,7 +1,8 @@
 <?php
 
-namespace Alura\DesignPattern;
+namespace Alura\DesignPattern\Pedido;
 
+use Alura\DesignPattern\Orcamento;
 use SplObserver;
 
 class PedidoComSplSubject implements \SplSubject
