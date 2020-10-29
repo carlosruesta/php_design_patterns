@@ -92,11 +92,11 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
     + Neste caso transformo o Array num Iterator, pela função do PHP puro para cast \ArrayIterator()
  
  
- ## Padrões Estruturais
+## Padrões Estruturais
  
  Padrões estruturais nos ajudam a relacionar diversas classes de forma organizada.
  
- #### Adapters
+#### Adapters
  
  + Recomendação para trabalhar com dependencias: **Depender sempre de abstrações (interfaces ou classes abstratas), e não de implementações específicas**
     + Este é um dos princípio de SOLID (Dependency Inversion Principle, a letra D). 
@@ -104,7 +104,7 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
     + Mesmo que dependamos de uma classe concreta, o ideal é depender de sua interface, ou seja, uma chamada de método público, e não uma série de chamadas.
  + Detalhes de infraestrutura devem ser abstraídos através de interfaces
  
- #### Bridge
+#### Bridge
  
 + O padrão de ponte visa representar o fluxo de transformação ou execução que acontece em 2 universos diferentes.
 + Exemplos:
@@ -173,4 +173,14 @@ Sempre que uma nova funcionalidade dever ser implementada, o ideal é que possam
 + Vale ressaltar também que a parte da criação desses objetos compartilhados, utilizando um cache, vai ser mostrada no próximo curso, que é o de Padrões de Projeto Criacionais.
 + **Esse padrão só deve ser utilizado caso hajam milhões de objetos em memória ao mesmo tempo, fazendo com que muita memória RAM seja utilizada.**
 
+## Padrões Criacionais
+
+São responsáveis por prover formas de criarmos objetos que precisam de alguma lógica.
+
+#### Flyweight - Parte 2
+
++ Foi criada uma classe específica para criação do pedido por ser um objeto complexo que depende de outros objetos do sistema. 
++ O principal benefício que essa classe trará será uma lógica de criação com cache para evitar a criação de objetos desnecessários;
++ Quando a lógica da criação de um objeto complexo é extraída para uma classe especializada, ganhamos legibilidade em nosso código.
++ Ao ter uma classe especializada em criar um objeto, nós podemos ter lógicas sendo aplicadas para criá-lo corretamente. 
 
