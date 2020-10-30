@@ -184,3 +184,11 @@ São responsáveis por prover formas de criarmos objetos que precisam de alguma 
 + Quando a lógica da criação de um objeto complexo é extraída para uma classe especializada, ganhamos legibilidade em nosso código.
 + Ao ter uma classe especializada em criar um objeto, nós podemos ter lógicas sendo aplicadas para criá-lo corretamente. 
 
+#### Factory
+
++ Permite que o código seja extensivel e seja fácil criar novos comportamentos isolados (classes filhas);
++ Neste caso vamos implementar o padrão Factory que permite extender a criacao de comportamentos (classes filha) com comportamentos próprios, mas a Factory conterá alguns métodos (classe pai) que serão reaproveitados pelos filhos;
++ Todas as classes filhas terão que implementar um comportamento comum (interface ou metodo abstrato de classe abstrata) que será chamado pelas aplicações;
++ A classe Factory deverá ser abstrata pois terá pelo menos um método abstrato que permitirá a criação das classes filhas correta para o comportamento certo em tempo de execução;
+ 
+    
