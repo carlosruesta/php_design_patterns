@@ -186,9 +186,14 @@ São responsáveis por prover formas de criarmos objetos que precisam de alguma 
 
 #### Factory
 
++ Também chamado de Virtual Constructor ( Constructor Virtual );
 + Permite que o código seja extensivel e seja fácil criar novos comportamentos isolados (classes filhas);
 + Neste caso vamos implementar o padrão Factory que permite extender a criacao de comportamentos (classes filha) com comportamentos próprios, mas a Factory conterá alguns métodos (classe pai) que serão reaproveitados pelos filhos;
 + Todas as classes filhas terão que implementar um comportamento comum (interface ou metodo abstrato de classe abstrata) que será chamado pelas aplicações;
 + A classe Factory deverá ser abstrata pois terá pelo menos um método abstrato que permitirá a criação das classes filhas correta para o comportamento certo em tempo de execução;
- 
+
++ Definição: Quando temos uma classe que, além de realizar uma ação, cria um dos objetos necessários para essa ação acontecer, e dependendo da implementação da classe, esse objeto pode ser de tipos diferentes, 
+dizemos que temos um método que fabrica um objeto, ou seja, um Factory Method 
++ Comparação com outras implementações de padrões diferentes do Factory Method: https://refactoring.guru/design-patterns/factory-comparison
+
     
