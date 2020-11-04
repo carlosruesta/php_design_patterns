@@ -196,4 +196,11 @@ São responsáveis por prover formas de criarmos objetos que precisam de alguma 
 dizemos que temos um método que fabrica um objeto, ou seja, um Factory Method 
 + Comparação com outras implementações de padrões diferentes do Factory Method: https://refactoring.guru/design-patterns/factory-comparison
 
-    
+#### Abstract Factory
+
++ Permitirá criar familias de objetos relacionados de forma fácil e confiável. 
++ A criação dos objetos relacionados será responsabilidade de uma fábrica específica para cada tipo de comportamento e permitirá que os objetos sejam criados corretamente;
++ Se em algum momento tivermos objetos fortemente relacionados em nosso sistema, podemos separar a criação deles em uma única classe, para garantir que eles sejam criados sempre em conjunto com o seu "par" correto. 
+    + Essa família de classes estendem o que é conhecida como Abstract Factory, por ser uma fábrica abstrata, que pode criar famílias de objetos, e não apenas um objeto específico.
+    + Para saber mais sobre o padrão Abstract Factory e outros exemplos de implementação, você pode conferir esse link: https://refactoring.guru/design-patterns/abstract-factory
+
