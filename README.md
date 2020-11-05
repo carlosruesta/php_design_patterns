@@ -204,3 +204,11 @@ dizemos que temos um método que fabrica um objeto, ou seja, um Factory Method
     + Essa família de classes estendem o que é conhecida como Abstract Factory, por ser uma fábrica abstrata, que pode criar famílias de objetos, e não apenas um objeto específico.
     + Para saber mais sobre o padrão Abstract Factory e outros exemplos de implementação, você pode conferir esse link: https://refactoring.guru/design-patterns/abstract-factory
 
+#### Builder
+
++ O padrão de projeto Builder é muito útil para construirmos objetos complexos, que não necessariamente conhecemos a implementação.
+    + Aqui tenho um builder que será uma classe abstrata que será o pai de classes que implementem o método que retornará o objeto concreto criado de forma particular por cada classe filha; 
++ Um padrão muito semelhante é o Test Data Builder, que é utilizado para criar objetos complexos em cenários de testes automatizados. 
+    + Isso aqui realmente faz sentido pois permite que um unico cara seja chamado para criar objetos complexos que atendam casos específicos
++ Neste caso também vimos o padrão "Fluent Interface" que nos permite encadear chamadas de métodos para criação de objetos com muitas propriedades para preencher;
+
