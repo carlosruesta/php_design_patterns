@@ -24,4 +24,21 @@ class NotaFiscal
         );
     }
 
+    public function clonar(): NotaFiscal
+    {
+        $clone = new NotaFiscal();
+        $clone->cnpjEmpresa = $this->cnpjEmpresa;
+        $clone->razaoSocialEmpresa = $this->razaoSocialEmpresa;
+        $clone->itens = $this->itens;   // neste caso também levará os mesmos objetos dos itens, somente copiará as referencias... tomar cuidado ao salvar no banco de dados uma coisa como essa
+        $clone->observacoes = $this->observacoes;
+        $clone->dataEmissao = $this->dataEmissao;       // neste caso é o mesmo objeto anterior, somente esta copiando a referencia
+        $clone->valorImpostos = $this->valorImpostos;
+
+        return $clone;
+    }
+
+    public function __clone()
+    {
+        $this->dataEmissao = new \DateTimeImmutable();
+    }
 }

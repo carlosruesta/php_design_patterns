@@ -212,3 +212,8 @@ dizemos que temos um método que fabrica um objeto, ou seja, um Factory Method
     + Isso aqui realmente faz sentido pois permite que um unico cara seja chamado para criar objetos complexos que atendam casos específicos
 + Neste caso também vimos o padrão "Fluent Interface" que nos permite encadear chamadas de métodos para criação de objetos com muitas propriedades para preencher;
 
+#### Prototype
+
++ Também chamado de padrão **Clone**
++ Permite clonar um objeto e somente mudar o que é necessário;
++ O PHP já tem algumas formas mais rápidas para fazer isso: clone e método mágico chamado __clone que toda classe já dispõe. 
