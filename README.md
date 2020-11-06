@@ -217,3 +217,10 @@ dizemos que temos um método que fabrica um objeto, ou seja, um Factory Method
 + Também chamado de padrão **Clone**
 + Permite clonar um objeto e somente mudar o que é necessário;
 + O PHP já tem algumas formas mais rápidas para fazer isso: clone e método mágico chamado __clone que toda classe já dispõe. 
+
+#### Singleton
+
++ Criar uma unica instancia de um objeto que seja reaproveitada em várias partes do sistema;
++ É possível gerenciar a criação de objetos para controlar o número de instâncias de determinada classe
++ Se quisermos que apenas uma instância de determinada classe exista, podemos implementar o padrão Singleton
++ Nem sempre esse padrão é necessário, visto que o PHP "dura" apenas um request
